@@ -7,41 +7,85 @@ include_once $path . '/wp-load.php';
 include_once $path . '/wp-includes/wp-db.php';
 include_once $path . '/wp-includes/pluggable.php';
 
-// require("../guw-subscription-renewal-post/iSDK/isdk.php");
 
 
-function create_infusionsoft_field() {
+
+
+// <!-- <script type="text/javascript">
+
+// 	function showPrice() {
+// 		var price = document.getElementsByName('price');
+
+// 		for (i = 0; i < price.length; i++) {
+// 			if (price[i].checked) {
+// 				document.getElementById('result').innerHTML = '$' + price[i].value;
+// 			}
+// 		}
+// 	}
 	
-	// global $i2sdk;
-	// $app = $i2sdk->isdk;
-
-	// $returnFields = array('Email', 'FirstName', 'LastName', '_myCustomField');
-	// $conDat = $app->loadCon(24782, $returnFields);
-
-	// wp_enqueue_style('style-forms', '');
-
-	$html = '<div class="form_wrapper" style="max-width: 925px; width:100%;margin:50px auto 0;border: 1px solid #f3ab3c;">';
-	$html .= '<form id="sales_page_form" style="width:100%;padding:3%;margin:0 auto;">';
-	$html .= '<h1 style="text-align:center;margin: 50px 0;">MBT Order Form</h1>';
-	$html .= '<div style="display:block;margin:50px 0;text-align:center;"><input type="radio" id="monthly" name="price" value="Monthly">';
-	$html .= '<input type="radio" id="yearly" name="price" value="Yearly"></div>';
-	$html .= '<div style="display:block;margin:10px;"><input type="text" id="first_name" name="first_name" placeholder="First Name" style="width: 49%;">';
-	$html .= '<input type="text" id="last_name" name="last_name" placeholder="Last Name" style="width: 49%;margin-left:1%;"></div>';
-	$html .= '<div style="display:block;margin:10px;"><input type="text" id="street_address" name="street_address" placeholder="Street Address"></div>';
-	$html .= '<div style="display:block;margin:10px;"><input type="text" id="city" name="city" placeholder="City">';
-	$html .= '<input type="text" id="state" name="state" placeholder="State">';
-	$html .= '<input type="text" id="zip_code" name="zip_code" placeholder="Zip"></div>';
-	$html .= '<div style="display:block;margin:10px;"><input type="text" id="credit_card" name="credit_card" placeholder="Card Number"></div>';
-	$html .= '<div style="display:block;margin:10px;"><input type="text" id="expiration_date" name="expiration_date" placeholder="Expiration Date">';
-	$html .= '<input type="text" id="csv" name="csv" placeholder="CSV"></div>';
-	$html .= '<button style="margin:0 auto;text-align:center;background:#ffa800;color:#ffffff;border-radius:15px;font-family: Montserrat,sans-serif;text-transform: uppercase;font-weight:700;font-size:16px;border: 1px solid #ffa800;padding:2%;">Submit My Order</button>';
-	$html .= '</form></div>';
-
-	echo $html;
-	// echo "Shortcode shows here";
-}
 
 
+// </script> -->
 
 
-?>
+// function html_form_code() {
+// 	echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
+// 	echo '<p>';
+// 	echo 'Your Name (required) <br/>';
+// 	echo '<input type="text" name="cf-name" pattern="[a-zA-Z0-9 ]+" value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
+// 	echo '</p>';
+// 	echo '<p>';
+// 	echo 'Your Email (required) <br/>';
+// 	echo '<input type="email" name="cf-email" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" />';
+// 	echo '</p>';
+// 	echo '<p>';
+// 	echo 'Subject (required) <br/>';
+// 	echo '<input type="text" name="cf-subject" pattern="[a-zA-Z ]+" value="' . ( isset( $_POST["cf-subject"] ) ? esc_attr( $_POST["cf-subject"] ) : '' ) . '" size="40" />';
+// 	echo '</p>';
+// 	echo '<p>';
+// 	echo 'Your Message (required) <br/>';
+// 	echo '<textarea rows="10" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
+// 	echo '</p>';
+// 	echo '<p><input type="submit" name="cf-submitted" value="Send"></p>';
+// 	echo '</form>';
+// }
+
+// function deliver_mail() {
+
+// 	// if the submit button is clicked, send the email
+// 	if ( isset( $_POST['cf-submitted'] ) ) {
+
+// 		// sanitize form values
+// 		$name    = sanitize_text_field( $_POST["cf-name"] );
+// 		$email   = sanitize_email( $_POST["cf-email"] );
+// 		$subject = sanitize_text_field( $_POST["cf-subject"] );
+// 		$message = esc_textarea( $_POST["cf-message"] );
+
+// 		// get the blog administrator's email address
+// 		$to = 'hconley@getuwired.com';
+
+// 		$headers = "From: $name <$email>" . "\r\n";
+
+// 		// If email has been process for sending, display a success message
+// 		if ( wp_mail( $to, $subject, $message, $headers ) ) {
+// 			echo '<div>';
+// 			echo '<p>Thanks for contacting me, expect a response soon.</p>';
+// 			echo '</div>';
+// 		} else {
+// 			echo 'An unexpected error occurred';
+// 		}
+// 	}
+// }
+
+// function cf_shortcode() {
+// 	// ob_start();
+// 	deliver_mail();
+// 	html_form_code();
+
+// 	// return ob_get_clean();
+// 	// echo "here";
+// }
+
+// add_shortcode( 'sitepoint_contact_form', 'cf_shortcode' );
+
+

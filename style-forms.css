@@ -1,3 +1,82 @@
-input {
-	background-color: blue;
+#sales_page_form input {
+	background-color: #eee;
+	color:#343434;
+	border:none;
+	padding:1%;
+	font-family: "Montserrat",sans-serif;
 }
+
+body #sales_page_form #formsubmit{
+	color:#fff;
+}
+
+#form_wrapper{
+	text-align:center;
+}
+
+#messages{
+	margin: 205px auto 0px;
+}
+
+#sales_page_form ::placeholder {
+	color: #343434 !important;
+	font-family: "Montserrat",sans-serif;
+}
+#sales_page_form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #343434 !important;
+	font-family: "Montserrat",sans-serif;
+}
+#sales_page_form ::-moz-placeholder { /* Firefox 19+ */
+	color: #343434 !important;  
+	font-family: "Montserrat",sans-serif;
+}
+#sales_page_form :-ms-input-placeholder { /* IE 10+ */
+	color: #343434 !important; 
+	font-family: "Montserrat",sans-serif; 
+}
+#sales_page_form :-moz-placeholder { /* Firefox 18- */
+	color: #343434 !important;
+	font-family: "Montserrat",sans-serif;  
+}
+
+#lds-ring {
+	display:none;
+}
+
+.lds-ring {
+	display: inline-block;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	margin: 150px auto;
+    right: 48%;
+  }
+  .lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid #fff;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
